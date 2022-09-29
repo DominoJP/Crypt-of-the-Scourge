@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     public GameObject Player;
     public float MoveSpeed;
     Vector2 Movement = new Vector2();
-    Rigidbody2D RB;
+    Rigidbody2D RB2D;
     public float JumpMagnitude;
     
     // Start is called before the first frame update
@@ -19,65 +19,40 @@ public class PlayerController : MonoBehaviour
    
     void Awake()
     {
-        RB = GetComponent<Rigidbody2D>();
+        RB2D = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-       /* if (Input.GetKeyDown(KeyCode.Space))
+        movement();
+        
+       
+    }
+    void movement()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            RB.velocity = new Vector2(RB.velocity.x, JumpMagnitude);
-        }*/
-     
-        if (Input.GetKey(KeyCode.D))
+            //RB2D.velocity = new Vector2(RB2D.velocity.x, JumpMagnitude);
+            RB2D.AddForce(transform.up * JumpMagnitude, ForceMode2D.Impulse);
+            Debug.Log("Avery SUCKS");
+
+        }
+
+        else if (Input.GetKey(KeyCode.D))
         {
             Movement.x = 1 * MoveSpeed;
-            RB.velocity = Movement;
+            RB2D.velocity = Movement;
             Debug.Log("You pressed D");
-            while(Input.GetKey(KeyCode.D))
-            {
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    RB.velocity = new Vector2(RB.velocity.x, JumpMagnitude);
-                }
-            }
+
         }
 
         else if (Input.GetKey(KeyCode.A))
         {
             Movement.x = -1 * MoveSpeed;
-            RB.velocity = Movement;
+            RB2D.velocity = Movement;
             Debug.Log("You pressed A");
         }
-
-        else
-        {
-            Movement = new Vector2(0, Movement.y);
-        }
-
-        /*
-        if (Input.GetKey(KeyCode.W))
-        {
-            Movement.y = 1 * MoveSpeed;
-            RB.velocity = Movement;
-            Debug.Log("You pressed W");
-
-        }
-
-        else if (Input.GetKey(KeyCode.S))
-        {
-            Movement.y = -1 * MoveSpeed;
-            RB.velocity = Movement;
-            Debug.Log("You pressed S");
-        }
-
-        else
-        {
-            Movement = new Vector2(Movement.x, 0);
-            RB.velocity = Movement;
-        }
-        */
     }
 
 }
