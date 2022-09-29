@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    GameObject Player;
+    public GameObject Player;
     public float MoveSpeed;
     Vector2 Movement = new Vector2();
     Rigidbody2D RB;
@@ -25,7 +25,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
+     
         if (Input.GetKeyDown(KeyCode.D))
         {
             Movement.x = 1 * MoveSpeed;
@@ -38,15 +39,12 @@ public class PlayerController : MonoBehaviour
             Movement.x = -1 * MoveSpeed;
             RB.velocity = Movement;
             Debug.Log("Did we get ?");
-
-
-
         }
+
         else
         {
             Movement = new Vector2(0, Movement.y);
             RB.velocity = Movement;
-
         }
 
         if (Input.GetKeyDown(KeyCode.W))
