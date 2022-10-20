@@ -6,6 +6,7 @@ using UnityEngine;
 //Script to control Health, Bones, and abilities
 public class PlayerBehaviour : MonoBehaviour
 {
+    HealthBar healthBar;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +20,9 @@ public class PlayerBehaviour : MonoBehaviour
     }
     */
 
-    private void PlayerTakeDamage (int dmg)
+    private void PlayerTakeDamage (int dmg)                                  //Method for taking damage and altering HP Bar UI
     {
         GameManager.gameManager.PlayerHealth.Damage(dmg);
+        healthBar.SetHealth(GameManager.gameManager.PlayerHealth.Health);
     }
 }

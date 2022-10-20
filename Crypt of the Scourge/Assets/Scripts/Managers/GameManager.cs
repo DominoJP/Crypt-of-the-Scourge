@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Game Manager script to control the overall game
 public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager       //Set gameManager property, notation is a little screwy.
@@ -10,7 +11,8 @@ public class GameManager : MonoBehaviour
         private set;
     }
 
-    public HealthSystem PlayerHealth = new HealthSystem(50, 50);
+    public HealthSystem PlayerHealth = new HealthSystem(50, 50);  //Define player health as a new class within game manager so that it can always be referenced.
+
     // Changed Start to Awake so that GameManager is the first instantiated script.
     void Awake()
     {

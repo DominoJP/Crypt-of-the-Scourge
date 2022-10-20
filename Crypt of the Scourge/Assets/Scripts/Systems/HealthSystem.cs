@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Primary Health Script
 public class HealthSystem
 {
     //Variables set as fields
@@ -20,7 +21,7 @@ public class HealthSystem
             UnitHealth = value;
         }
     }
-    public int MaxHealth            //Proper for maximum potential  health in game Note: lack of parenthesis means it is a property not a method. 
+    public int MaxHealth            //Property for maximum potential  health in game Note: lack of parenthesis means it is a property not a method. 
     {
         get
         {
@@ -40,7 +41,7 @@ public class HealthSystem
 
     public void Damage (int Dmg)  //Damage method
     {
-        if(UnitHealth > 0)
+        if(UnitHealth > 0)     //If Health is greater than 0 inflict damage. 
         {
             UnitHealth -= Dmg;
         }
