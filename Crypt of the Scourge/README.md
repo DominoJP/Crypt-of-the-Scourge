@@ -52,25 +52,7 @@ cd Image-Encryption-AES
 
 ## Code Structure
 
-/Image-Encryption-Using-AES
-├── .gitattributes                 # Configuration for Git attributes
-├── .gitignore                     # Specifies files and directories for git to ignore in version control
-├── Image Encryption AES.sln       # Visual Studio solution file for the project(Project built in VS 2022)
-├── README.md                      # Project documentation
-├── big-mandelbrot.PNG             # Sample image file used for encryption testing (large filesize)
-├── madnelbrot.JPG                 # Sample image file used for encryption testing (small filesize)
-├── test.txt                       # Test file for verifying encryption and decryption on plaintext
-└── /Image Encryption AES          # Contains the main project files and source code
-    ├── AESFunctions.cpp           # Core AES encryption and decryption functions
-    ├── AESFunctions.h             # Header file for AES functions
-    ├── AESProject.cpp             # Main program file for encryption/decryption process
-    ├── AESmake.mak                # Makefile for compiling the project
-    ├── BashScript.tar.gz          # Compressed bash scripts for automation
-    ├── Image Encryption AES.vcxproj       # Visual Studio project file
-    ├── Image Encryption AES.vcxproj.filters # Visual Studio project filters
-    └── BashScript/                # Directory with additional bash scripts for automation
-
-
+/Image-Encryption-Using-AES ├── .gitattributes # Configuration for Git attributes ├── .gitignore # Specifies files and directories to ignore in version control ├── Image Encryption AES.sln # Visual Studio solution file (Project built in VS 2022) ├── README.md # Project documentation ├── big-mandelbrot.PNG # Sample image file used for encryption testing (large filesize) ├── madnelbrot.JPG # Sample image file used for encryption testing (small filesize) ├── test.txt # Test file for verifying encryption and decryption on plaintext └── /Image Encryption AES # Contains main project files and source code ├── AESFunctions.cpp # Core AES encryption and decryption functions ├── AESFunctions.h # Header file for AES functions ├── AESProject.cpp # Main program file for encryption/decryption process ├── AESmake.mak # Makefile for compiling the project ├── BashScript.tar.gz # Compressed bash scripts for automation ├── Image Encryption AES.vcxproj # Visual Studio project file ├── Image Encryption AES.vcxproj.filters # Visual Studio project filters └── BashScript/ # Directory with additional bash scripts for automation
 
 ### Detailed File Explanations
 
